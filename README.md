@@ -11,8 +11,8 @@ The Runners and Servers pages in AgenticFlow give you a command that downloads a
 To check a file you already downloaded:
 
 ```bash
-grep agenticflow-0.8.0.tgz SHA256SUMS | sha256sum -c -      # Linux
-grep agenticflow-0.8.0.tgz SHA256SUMS | shasum -a 256 -c -  # macOS
+grep agenticflow-0.8.1.tgz SHA256SUMS | sha256sum -c -      # Linux
+grep agenticflow-0.8.1.tgz SHA256SUMS | shasum -a 256 -c -  # macOS
 ```
 
 ## Check a signature
@@ -21,5 +21,5 @@ Each release is signed with an Ed25519 key whose private half exists only in the
 
 ```bash
 openssl pkeyutl -verify -pubin -inkey release-key.pem -rawin \
-    -in agenticflow-0.8.0.tgz -sigfile agenticflow-0.8.0.tgz.sig
+    -in agenticflow-0.8.1.tgz -sigfile agenticflow-0.8.1.tgz.sig
 ```
